@@ -9,6 +9,6 @@
 (global-set-key (kbd "C-c ms") 'magit-status)
 (global-set-key (kbd "C-c mp") 'magit-push)
 (global-set-key (kbd "C-c mdc") 'magit-svn-dcommit)
-(global-set-key (kbd "C-c msr") 'magit-svn-rebase)
+(global-set-key (kbd "C-c mr") 'magit-svn-rebase)
 
 (provide 'key-bindings)
