@@ -11,4 +11,11 @@
 (global-set-key (kbd "C-c mdc") 'magit-svn-dcommit)
 (global-set-key (kbd "C-c mr") 'magit-svn-rebase)
 
+;; Multiple cursors
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+
 (provide 'key-bindings)
