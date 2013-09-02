@@ -5,5 +5,8 @@
 (global-set-key (kbd "C-c C-s cs \"") 'surround-change-double-quote)
 (global-set-key (kbd "C-c C-s cs '") 'surround-change-single-quote)
 
+;; Magit
+(global-set-key (kbd "C-x m") 'magit-status)
+(autoload 'magit-status "magit")
 
 (provide 'key-bindings)
