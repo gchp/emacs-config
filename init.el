@@ -23,6 +23,26 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; Highlight current line
+(global-hl-line-mode t)
+
+;; Auto refresh buffers
+(global-auto-revert-mode t)
+
+;; Auto refresh Dired
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+
+;; Remove text in active  if inserting text
+(delete-selection-mode t)
+
+;; No tabs
+(set-default 'indent-tabs-mode nil)
+
+;; load emacs Custom-settings
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
+
 ;; emacs powerline
 (require 'powerline)
 (setq powerline-color1 "gray30")
@@ -47,6 +67,13 @@
 ;; Expand region
 (require 'expand-region)
 
+;; Pony-mode
+(add-to-list 'load-path (expand-file-name "pony-mode/src" user-lib-dir))
+(require 'pony-mode)
+
+;; Git gutter
+(require 'git-gutter)
+(global-git-gutter-mode t)
 
 ;; auto completion
 (require 'auto-complete-config)
@@ -80,7 +107,3 @@
 
 ;; load custom keys
 (require 'key-bindings)
-
-;; load emacs Custom-settings
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
