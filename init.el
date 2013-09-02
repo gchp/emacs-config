@@ -81,5 +81,6 @@
 ;; load custom keys
 (require 'key-bindings)
 
-(require 'custom)
-
+;; load emacs Custom-settings
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
