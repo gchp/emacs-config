@@ -6,12 +6,9 @@
 (global-set-key (kbd "C-c C-s cs '") 'surround-change-single-quote)
 
 ;; Magit
-(global-set-key (kbd "C-c C-m s") 'magit-status)
-(autoload 'magit-status "magit")
-(global-set-key (kbd "C-c C-m p") 'magit-push)
-(autoload 'magit-push "magit")
-(global-set-key (kbd "C-c C-m dc") 'magit-svn-dcommit)
-(autoload 'magit-svn-dcommit "magit")
-(global-set-key (kbd "C-c C-m sr") 'magit-svn-rebase)
+(global-set-key (kbd "C-c ms") 'magit-status)
+(global-set-key (kbd "C-c mp") 'magit-push)
+(global-set-key (kbd "C-c mdc") 'magit-svn-dcommit)
+(global-set-key (kbd "C-c msr") 'magit-svn-rebase)
 
 (provide 'key-bindings)
