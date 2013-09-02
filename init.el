@@ -43,6 +43,9 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
+;; org-mode
+(setq org-log-done 'note)
+
 ;; emacs powerline
 (require 'powerline)
 (setq powerline-color1 "gray30")
