@@ -75,6 +75,9 @@
 (require 'git-gutter)
 (global-git-gutter-mode t)
 
+;; Set up magit to work with git-svn repos
+(add-hook 'magit-mode-hook 'magit-load-config-extensions)
+
 ;; auto completion
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/lib/auto-complete//ac-dict")
