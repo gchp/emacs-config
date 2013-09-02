@@ -1,18 +1,16 @@
 ;; package repos
 (require 'package)
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
 (setq user-lib-dir (expand-file-name "lib" user-emacs-directory))
-
+(add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path user-lib-dir)
-
 (dolist (project (directory-files user-lib-dir t "\\w+"))
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
+
 
 ;; load zenburn theme
 (load-theme 'zenburn t)
@@ -48,7 +46,7 @@
 
 ;; Expand region
 (require 'expand-region)
-(global-set-key (kbd "C-@") 'er/expand-region)
+
 
 ;; auto completion
 (require 'auto-complete-config)
@@ -76,12 +74,8 @@
   (save-excursion
     (surround-change-surrounding "'" "\"")))
 
-;key bindings
-(global-set-key (kbd "C-c C-s cs \"") 'surround-change-double-quote)
-(global-set-key (kbd "C-c C-s cs '") 'surround-change-single-quote)
-
-
-
+;; load custom key bindings
+(require 'key-bindings)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
