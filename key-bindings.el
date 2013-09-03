@@ -1,5 +1,6 @@
-;; Bind C-@ to expand region
+;; Expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C--") 'er/contract-region)
 
 ;; Bind C-c C-s cs ("|') to toggle surrounding quotes
 (global-set-key (kbd "C-c C-s cs \"") 'surround-change-double-quote)
