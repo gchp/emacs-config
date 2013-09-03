@@ -37,7 +37,9 @@
 (delete-selection-mode t)
 
 ;; No tabs
-(set-default 'indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
 
 ;; load emacs Custom-settings
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
