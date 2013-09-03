@@ -11,6 +11,8 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+;; sane defaults from https://github.com/magnars/.emacs.d/
+(require 'sane-defaults)
 
 ;; load zenburn theme
 (load-theme 'zenburn t)
@@ -26,18 +28,7 @@
 ;; Highlight current line
 (global-hl-line-mode t)
 
-;; Auto refresh buffers
-(global-auto-revert-mode t)
-
-;; Auto refresh Dired
-(setq global-auto-revert-non-file-buffers t)
-(setq auto-revert-verbose nil)
-
-;; Remove text in active  if inserting text
-(delete-selection-mode t)
-
-;; No tabs
-(setq-default indent-tabs-mode nil)
+;; Indentation
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
 
@@ -56,12 +47,17 @@
 (setq powerline-color1 "gray30")
 (setq powerline-color2 "gray45")
 
-;; Turn on uniquify!
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward)
-(setq uniquify-after-kill-buffer-p t)
-(setq uniquify-ignore-buffers-re "^\\*")
-(setq uniquify-separator " @ ")
+;; snippets
+;;(require 'yasnippet)
+;;(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+;;(yas-global-mode 1)
+
+;; emmet config
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook 'emmet-mode)
+(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
+(setq emmet-move-cursor-between-quotes t)
 
 ;; icomplete 
 (icomplete-mode 1)
