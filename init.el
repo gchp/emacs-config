@@ -89,6 +89,9 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/lib/auto-complete//ac-dict")
 (ac-config-default)
 
+;; rainbow mode
+(require 'rainbow-mode)
+
 ;; js2-mode
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
