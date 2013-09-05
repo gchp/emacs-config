@@ -99,10 +99,6 @@
 
 ;; rainbow mode
 (require 'rainbow-mode)
-(add-to-list 'auto-mode-alist '("\\.css\\'" . rainbow-mode))
-
-;; less
-(add-to-list 'auto-mode-alist '("\\.less\\'" . less-css-mode))
 
 ;; js2-mode
 (require 'js2-mode)
