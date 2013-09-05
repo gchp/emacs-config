@@ -26,7 +26,7 @@
 (scroll-bar-mode -1)
 
 ;; Highlight current line
-(global-hl-line-mode t)
+;; (global-hl-line-mode t)
 
 ;; Indentation
 (setq-default tab-width 2)
@@ -87,6 +87,10 @@
 
 ;; Set up magit to work with git-svn repos
 (add-hook 'magit-mode-hook 'magit-load-config-extensions)
+(defun magit-commit-mode-init ()
+  (when (looking-at "\n")
+    (open-line 1)))
+(add-hook 'git-commit-mode-hook 'magit-commit-mode-init)
 
 ;; auto completion
 (require 'auto-complete-config)
@@ -95,6 +99,10 @@
 
 ;; rainbow mode
 (require 'rainbow-mode)
+(add-to-list 'auto-mode-alist '("\\.css\\'" . rainbow-mode))
+
+;; less
+(add-to-list 'auto-mode-alist '("\\.less\\'" . less-css-mode))
 
 ;; js2-mode
 (require 'js2-mode)
