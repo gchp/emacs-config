@@ -1,0 +1,3 @@
+[submodule "lib/elpy"]
+	path = lib/elpy
+	url = https://github.com/jorgenschaefer/elpy.git
