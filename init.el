@@ -1,8 +1,3 @@
-;; package repos
-(require 'package)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize)
 
 (setq user-lib-dir (expand-file-name "lib" user-emacs-directory))
 (add-to-list 'load-path user-emacs-directory)
@@ -11,14 +6,10 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
-(require 'dash)
-(defun packages-install (packages)
-  (--each packages
-          (when (not (package-installed-p it))
-            (package-install it)))
-  (delete-other-windows))
+;; load package config
+(require 'setup-package)
 
-
+;; list of packages
 (defun init--install-packages ()
   (packages-install
    '(yasnippet
