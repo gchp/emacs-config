@@ -18,4 +18,7 @@
 ;; Pony mode
 (global-set-key (kbd "C-c pm") 'pony-tpl-mode)
 
+;; Commenting
+(global-set-key (kbd "C-x /") 'toggle-comment-on-line)
+
 (provide 'key-bindings)

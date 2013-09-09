@@ -40,6 +40,12 @@
 
 ;; Highlight current line
 ;; (global-hl-line-mode t)
+(elpy-enable)
+
+(defun toggle-comment-on-line ()
+  "comment or un-comment current line"
+  (interactive)
+  (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
 
 ;; Indentation
 (setq-default tab-width 2)
