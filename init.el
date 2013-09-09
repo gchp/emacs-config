@@ -11,6 +11,28 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+(require 'dash)
+(defun packages-install (packages)
+  (--each packages
+          (when (not (package-installed-p it))
+            (package-install it)))
+  (delete-other-windows))
+
+
+(defun init--install-packages ()
+  (packages-install
+   '(yasnippet
+     elpy
+     emmet-mode
+     git-gutter)))
+
+(condition-case nil
+    (init--install-packages)
+  (error
+   (package-refresh-contents)
+   (init--install-packages)))
+
+
 ;; sane defaults from https://github.com/magnars/.emacs.d/
 (require 'sane-defaults)
 
