@@ -15,7 +15,10 @@
    '(yasnippet
      elpy
      emmet-mode
-     git-gutter)))
+     git-gutter
+     zenburn-theme
+     icomplete+
+     magit)))
 
 (condition-case nil
     (init--install-packages)
