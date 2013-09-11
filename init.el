@@ -30,14 +30,12 @@
 ;; sane defaults from https://github.com/magnars/.emacs.d/
 (require 'sane-defaults)
 
-;; Set font
-(set-face-attribute 'default nil :font "Source Code Pro-9")
-
 ;; load zenburn theme
 (load-theme 'zenburn t)
 
 ;; set font
-(set-default-font "Source Code Pro")
+(set-default-font "Source Code Pro-9")
+(setq default-frame-alist '((font . "Source Code Pro-9")))
 
 ;; hide menu bar and toolbar
 (menu-bar-mode -1)
@@ -58,7 +56,7 @@
 (setq indent-line-function 'insert-tab)
 
 ;; load emacs Custom-settings
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
 ;; org-mode
