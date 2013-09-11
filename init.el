@@ -1,7 +1,14 @@
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 (setq user-lib-dir (expand-file-name "lib" user-emacs-directory))
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path user-lib-dir)
+
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
+
 (dolist (project (directory-files user-lib-dir t "\\w+"))
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
@@ -37,11 +44,6 @@
 (set-default-font "Source Code Pro-9")
 (setq default-frame-alist '((font . "Source Code Pro-9")))
 
-;; hide menu bar and toolbar
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-
 ;; Highlight current line
 ;; (global-hl-line-mode t)
 
@@ -55,10 +57,6 @@
 ;; Indentation
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
-
-;; load emacs Custom-settings
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
 
 ;; org-mode
 (setq org-log-done 'note)
