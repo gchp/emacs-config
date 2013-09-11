@@ -44,7 +44,8 @@
 
 ;; Highlight current line
 ;; (global-hl-line-mode t)
-(elpy-enable)
+
+;;(elpy-enable)
 
 (defun toggle-comment-on-line ()
   "comment or un-comment current line"
