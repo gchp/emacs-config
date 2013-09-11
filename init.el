@@ -27,6 +27,9 @@
 ;; sane defaults from https://github.com/magnars/.emacs.d/
 (require 'sane-defaults)
 
+;; Set font
+(set-face-attribute 'default nil :font "Source Code Pro-9")
+
 ;; load zenburn theme
 (load-theme 'zenburn t)
 
