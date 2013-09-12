@@ -21,4 +21,7 @@
 ;; Commenting
 (global-set-key (kbd "C-x /") 'toggle-comment-on-line)
 
+;; Buffers
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 (provide 'key-bindings)
