@@ -124,6 +124,9 @@
 ;; rainbow mode
 (require 'rainbow-mode)
 
+(add-hook 'less-css-mode-hook (lambda () (rainbow-mode)))
+(add-hook 'css-mode-hook (lambda () (rainbow-mode)))
+
 ;; js2-mode
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
