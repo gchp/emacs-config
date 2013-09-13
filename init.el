@@ -25,7 +25,9 @@
      git-gutter
      zenburn-theme
      icomplete+
-     magit)))
+     magit
+     js2-refactor
+     less-css-mode)))
 
 (condition-case nil
     (init--install-packages)
@@ -126,6 +128,10 @@
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (setq js2-global-externs '("module" "require" "define" "$"))
+
+;; js2-refactor
+(require 'js2-refactor)
+(js2r-add-keybindings-with-prefix "C-c C-m")
 
 (column-number-mode t)
 (show-paren-mode t)
