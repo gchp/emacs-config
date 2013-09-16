@@ -27,7 +27,9 @@
      icomplete+
      magit
      js2-refactor
-     less-css-mode)))
+     less-css-mode
+     flx-ido
+     projectile)))
 
 (condition-case nil
     (init--install-packages)
@@ -59,6 +61,10 @@
 ;; Indentation
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
+
+;; Projectile
+(require 'projectile)
+(projectile-global-mode)
 
 ;; org-mode
 (setq org-log-done 'note)
