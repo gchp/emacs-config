@@ -95,7 +95,7 @@
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
 (setq emmet-move-cursor-between-quotes t)
 
-;; icomplete 
+;; icomplete
 (icomplete-mode 1)
 (setq icomplete-compute-delay 0)
 (require 'icomplete+)
@@ -147,6 +147,10 @@
 (global-visual-line-mode t)
 (mouse-avoidance-mode 'banish)
 
+;;;;;;;;;;
+;; Buffer defuns
+;;;;;;;;;;;
+
 ;; change surrounding quotes
 (defun surround-change-surrounding (quote replacement)
   (search-forward-regexp quote)
@@ -166,6 +170,21 @@
   (interactive)
   (save-excursion
     (surround-change-surrounding "'" "\"")))
+
+(defun untabify-buffer ()
+  (interactive)
+  (untabify (point-min) (point-max)))
+
+(defun indent-buffer ()
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun cleanup-buffer ()
+  (interactive)
+  (untabify-buffer)
+  (delete-trailing-whitespace)
+  (indent-buffer))
+
 
 ;; load custom keys
 (require 'key-bindings)
