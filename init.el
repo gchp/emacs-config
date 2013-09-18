@@ -146,7 +146,7 @@
 (show-paren-mode t)
 (global-visual-line-mode t)
 (mouse-avoidance-mode 'banish)
-
+(electric-pair-mode 1)
 ;;;;;;;;;;
 ;; Buffer defuns
 ;;;;;;;;;;;
