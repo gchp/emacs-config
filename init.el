@@ -48,6 +48,9 @@
 (set-default-font "Source Code Pro-9")
 (setq default-frame-alist '((font . "Source Code Pro-9")))
 
+;; load local settings
+(require 'local)
+
 ;; Highlight current line
 ;; (global-hl-line-mode t)
 
