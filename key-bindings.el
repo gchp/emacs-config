@@ -24,4 +24,5 @@
 ;; Buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+(global-set-key (kbd "C-c n") 'cleanup-buffer)
 (provide 'key-bindings)
