@@ -28,7 +28,14 @@
 (require-package 'flx-ido)
 (require-package 'projectile)
 (require-package 'coffee-mode)
+(require-package 'evil)
+(require-package 'key-chord)
 
+;; Enable key-chord for keybindings
+(key-chord-mode 1)
+
+;; Evil
+(evil-mode 1)
 
 ;; sane defaults from https://github.com/magnars/.emacs.d/
 (require 'sane-defaults)

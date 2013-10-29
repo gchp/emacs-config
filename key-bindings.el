@@ -1,3 +1,6 @@
+;; Evil keybindings
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+
 ;; Expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C--") 'er/contract-region)
