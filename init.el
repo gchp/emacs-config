@@ -27,6 +27,7 @@
 (require-package 'less-css-mode)
 (require-package 'flx-ido)
 (require-package 'projectile)
+(require-package 'coffee-mode)
 
 
 ;; sane defaults from https://github.com/magnars/.emacs.d/
