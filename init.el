@@ -16,26 +16,17 @@
 ;; load package config
 (require 'setup-package)
 
-;; list of packages
-(defun init--install-packages ()
-  (packages-install
-   '(yasnippet
-     elpy
-     emmet-mode
-     git-gutter
-     zenburn-theme
-     icomplete+
-     magit
-     js2-refactor
-     less-css-mode
-     flx-ido
-     projectile)))
-
-(condition-case nil
-    (init--install-packages)
-  (error
-   (package-refresh-contents)
-   (init--install-packages)))
+(require-package 'yasnippet)
+(require-package 'elpy)
+(require-package 'emmet-mode)
+(require-package 'git-gutter)
+(require-package 'zenburn-theme)
+(require-package 'icomplete+)
+(require-package 'magit)
+(require-package 'js2-refactor)
+(require-package 'less-css-mode)
+(require-package 'flx-ido)
+(require-package 'projectile)
 
 
 ;; sane defaults from https://github.com/magnars/.emacs.d/
@@ -47,9 +38,6 @@
 ;; set font
 (set-default-font "Source Code Pro-9")
 (setq default-frame-alist '((font . "Source Code Pro-9")))
-
-;; load local settings
-(require 'local)
 
 ;; Highlight current line
 ;; (global-hl-line-mode t)
