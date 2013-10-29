@@ -1,5 +1,10 @@
-;; Evil keybindings
+;; map jk to exit insert mode in evil
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+;; restore Control-e in evil-mode
+(define-key evil-normal-state-map "\C-e" 'evil-end-of-line)
+(define-key evil-insert-state-map "\C-e" 'end-of-line)
+(define-key evil-visual-state-map "\C-e" 'evil-end-of-line)
+(define-key evil-motion-state-map "\C-e" 'evil-end-of-line)
 
 ;; Expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
