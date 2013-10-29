@@ -30,6 +30,14 @@
 (require-package 'coffee-mode)
 (require-package 'evil)
 (require-package 'key-chord)
+(require-package 'smartparens)
+
+(require 'smartparens-config)
+(require 'smartparens-html)
+(smartparens-global-mode t)
+(show-smartparens-global-mode t)
+(sp-with-modes '(html-mode)
+  (sp-local-pair "%" "%"))
 
 ;; Enable key-chord for keybindings
 (key-chord-mode 1)
@@ -146,10 +154,8 @@
 (js2r-add-keybindings-with-prefix "C-c C-m")
 
 (column-number-mode t)
-(show-paren-mode t)
 (global-visual-line-mode t)
 (mouse-avoidance-mode 'banish)
-(electric-pair-mode 1)
 ;;;;;;;;;;
 ;; Buffer defuns
 ;;;;;;;;;;;
