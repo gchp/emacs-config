@@ -8,8 +8,8 @@
 (load-theme 'zenburn t)
 
 ;; set font
-(set-default-font "Source Code Pro-9")
-(setq default-frame-alist '((font . "Source Code Pro-9")))
+(set-default-font "Source Code Pro-10")
+(setq default-frame-alist '((font . "Source Code Pro-10")))
 
 ;; Indentation
 (setq-default tab-width 2)
