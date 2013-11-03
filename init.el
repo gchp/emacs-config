@@ -30,6 +30,7 @@
 (require-package 'evil)
 (require-package 'key-chord)
 (require-package 'smartparens)
+(require-package 'markdown-mode)
 
 (require 'smartparens-config)
 (require 'smartparens-html)
