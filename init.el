@@ -14,7 +14,7 @@
 
 ;; Load GUI config
 ;; Contains theme, font, modeline, window config etc
-(load "init-gui")
+(require 'init-gui)
 
 (require-package 'yasnippet)
 (require-package 'elpy)
