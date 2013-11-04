@@ -46,6 +46,7 @@
 ;; Evil
 (evil-mode 1)
 
+;; Initialize web-mode for .html files
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;; sane defaults from https://github.com/magnars/.emacs.d/
@@ -54,7 +55,7 @@
 ;; Highlight current line
 ;; (global-hl-line-mode t)
 
-;;(elpy-enable)
+;(elpy-enable)
 
 (defun toggle-comment-on-line ()
   "comment or un-comment current line"
@@ -138,26 +139,6 @@
 ;;;;;;;;;;
 ;; Buffer defuns
 ;;;;;;;;;;;
-
-;; change surrounding quotes
-(defun surround-change-surrounding (quote replacement)
-  (search-forward-regexp quote)
-  (delete-char -1)
-  (insert replacement)
-  (search-backward-regexp quote)
-  (delete-char 1)
-  (insert replacement)
-  )
-
-(defun surround-change-double-quote ()
-  (interactive)
-  (save-excursion
-    (surround-change-surrounding "\"" "'")))
-
-(defun surround-change-single-quote ()
-  (interactive)
-  (save-excursion
-    (surround-change-surrounding "'" "\"")))
 
 (defun untabify-buffer ()
   (interactive)
