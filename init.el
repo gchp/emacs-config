@@ -31,6 +31,7 @@
 (require-package 'key-chord)
 (require-package 'smartparens)
 (require-package 'markdown-mode)
+(require-package 'web-mode)
 
 (require 'smartparens-config)
 (require 'smartparens-html)
@@ -44,6 +45,8 @@
 
 ;; Evil
 (evil-mode 1)
+
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;; sane defaults from https://github.com/magnars/.emacs.d/
 (require 'sane-defaults)
