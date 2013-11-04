@@ -1,11 +1,11 @@
-(require-package 'zenburn-theme)
+(require-package 'flatland-theme)
 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; load zenburn theme
-(load-theme 'zenburn t)
+(load-theme 'flatland t)
 
 ;; set font
 (set-default-font "Source Code Pro-10")
