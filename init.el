@@ -111,10 +111,11 @@
 
 ;; Set up magit to work with git-svn repos
 (add-hook 'magit-mode-hook 'magit-load-config-extensions)
-(defun magit-commit-mode-init ()
-  (when (looking-at "\n")
-    (open-line 1)))
-(add-hook 'git-commit-mode-hook 'magit-commit-mode-init)
+;; Add extra new line to magit commit messages
+;; (defun magit-commit-mode-init ()
+;;   (when (looking-at "\n")
+;;     (open-line 1)))
+;; (add-hook 'git-commit-mode-hook 'magit-commit-mode-init)
 
 ;; auto completion
 (require 'auto-complete-config)
