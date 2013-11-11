@@ -20,7 +20,7 @@
 
 (setq evil-default-cursor t)
 
-(scroll-bar-mode -1)
+(scroll-bar-mode -1) ;; this probably shouldn't be here...
 (column-number-mode t)
 (global-visual-line-mode t)
 (mouse-avoidance-mode 'banish)
