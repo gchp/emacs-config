@@ -16,6 +16,9 @@
 ;; Contains theme, font, modeline, window config etc
 (require 'init-gui)
 
+;; Load Evil mode config
+(require 'init-evil)
+
 (require-package 'yasnippet)
 (require-package 'elpy)
 (require-package 'emmet-mode)
@@ -27,7 +30,6 @@
 (require-package 'flx-ido)
 (require-package 'projectile)
 (require-package 'coffee-mode)
-(require-package 'evil)
 (require-package 'key-chord)
 (require-package 'smartparens)
 (require-package 'markdown-mode)
