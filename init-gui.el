@@ -20,6 +20,7 @@
 
 (setq evil-default-cursor t)
 
+(scroll-bar-mode -1)
 (column-number-mode t)
 (global-visual-line-mode t)
 (mouse-avoidance-mode 'banish)
