@@ -45,9 +45,6 @@
 ;; Enable key-chord for keybindings
 (key-chord-mode 1)
 
-;; Evil
-(evil-mode 1)
-
 ;; Initialize web-mode for .html files
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
