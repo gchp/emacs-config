@@ -30,7 +30,6 @@
 (require-package 'flx-ido)
 (require-package 'projectile)
 (require-package 'coffee-mode)
-(require-package 'key-chord)
 (require-package 'smartparens)
 (require-package 'markdown-mode)
 (require-package 'web-mode)
@@ -42,8 +41,6 @@
 (sp-with-modes '(html-mode)
   (sp-local-pair "%" "%"))
 
-;; Enable key-chord for keybindings
-(key-chord-mode 1)
 
 ;; Initialize web-mode for .html files
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
@@ -156,4 +153,4 @@
 
 
 ;; load custom keys
-(require 'key-bindings)
+(require 'init-key-bindings)

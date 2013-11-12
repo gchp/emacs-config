@@ -1,3 +1,9 @@
+(require-package 'key-chord)
+
+;; Enable key-chord for keybindings
+(key-chord-mode 1)
+
+
 ;; map jk to exit insert mode in evil
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 
@@ -30,4 +36,5 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
-(provide 'key-bindings)
+
+(provide 'init-key-bindings)
