@@ -30,7 +30,7 @@
 (global-set-key (kbd "C-c pm") 'pony-tpl-mode)
 
 ;; Commenting
-(global-set-key (kbd "C-x /") 'toggle-comment-on-line)
+(global-set-key (kbd "C-x /") 'comment-or-uncomment-region-or-line)
 
 ;; Buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
