@@ -158,3 +158,7 @@
 
 ;; load custom keys
 (require 'init-key-bindings)
+
+
+(provide 'init)
+;;; init.el ends here
