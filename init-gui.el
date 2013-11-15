@@ -1,8 +1,10 @@
 (require-package 'flatland-theme)
 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+(when (fboundp 'set-scroll-bar-mode)
+  (set-scroll-bar-mode nil))
 
 ;; Indentation
 (setq-default tab-width 2)
@@ -17,10 +19,17 @@
                     :foreground "F0DFAF"
                     :box nil)
 
+;; show marker in left frint for lines not in buffer
+(setq indicate-empty-lines t)
+
+;; suppress GUI Features
+(setq use-file-dialog nil)
+(setq use-dialog-box nil)
+(setq inhibit-startup-screen t)
+(setq inhibit-startup-echo-area-message t)
 
 (setq evil-default-cursor t)
 
-(scroll-bar-mode -1) ;; this probably shouldn't be here...
 (column-number-mode t)
 (global-visual-line-mode t)
 (mouse-avoidance-mode 'banish)
