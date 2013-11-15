@@ -1,4 +1,12 @@
-(setq user-lib-dir (expand-file-name "lib" user-emacs-directory))
+;;; Emacs-Config -- My Emacs configuration for day-to-day development work
+
+;;; Commentary: 
+
+;; Initialisation file for my Emacs configuration
+
+;;; Code:
+
+(defvar user-lib-dir (expand-file-name "lib" user-emacs-directory))
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path user-lib-dir)
 
