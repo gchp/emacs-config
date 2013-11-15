@@ -1,6 +1,8 @@
 (setq user-lib-dir (expand-file-name "lib" user-emacs-directory))
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path user-lib-dir)
+
+(require 'init-utils)
 ;; load package config
 (require 'setup-package)
 
@@ -19,17 +21,17 @@
 ;; Load Evil mode config
 (require 'init-evil)
 
+(require 'init-flycheck)
+
 (require-package 'yasnippet)
 (require-package 'elpy)
 (require-package 'emmet-mode)
 (require-package 'git-gutter)
 (require-package 'icomplete+)
 (require-package 'magit)
-(require-package 'js2-refactor)
 (require-package 'less-css-mode)
 (require-package 'flx-ido)
 (require-package 'projectile)
-(require-package 'coffee-mode)
 (require-package 'smartparens)
 (require-package 'markdown-mode)
 (require-package 'web-mode)
@@ -133,14 +135,7 @@
 (add-hook 'less-css-mode-hook (lambda () (rainbow-mode)))
 (add-hook 'css-mode-hook (lambda () (rainbow-mode)))
 
-;; js2-mode
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(setq js2-global-externs '("module" "require" "define" "$"))
-
-;; js2-refactor
-(require 'js2-refactor)
-(js2r-add-keybindings-with-prefix "C-c C-m")
+(require 'init-javascript)
 
 ;;;;;;;;;;
 ;; Buffer defuns
