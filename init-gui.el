@@ -39,7 +39,7 @@
 
 (defun init-fonts ()
   (set-default-font "Source Code Pro-10")
-  (setq default-frame-alist '((font . "Source Code Pro-10"))))
+  (add-to-list 'default-frame-alist '(font . "Source Code Pro-10")))
 
 
 (defun init-gui-customisations ()
