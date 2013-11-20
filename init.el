@@ -65,7 +65,7 @@
 ;(elpy-enable)
 
 (defun comment-or-uncomment-region-or-line ()
-  "Comments or uncomments the region or the current line if there's no active region."
+  "Comments or uncomments the active region, or the current line if there's no active region."
   (interactive)
   (let (beg end)
     (if (region-active-p)
@@ -74,7 +74,7 @@
     (comment-or-uncomment-region beg end)))
 
 (defun toggle-comment-on-line ()
-  "comment or un-comment current line"
+  "Comment or un-comment current line."
   (interactive)
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
 
