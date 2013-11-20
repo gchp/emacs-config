@@ -85,11 +85,6 @@
 ;; org-mode
 (setq org-log-done 'note)
 
-;; orj-jira
-(require 'org-jira)
-;; set jira url:
-;; (setq jiralib-url "http://igajira:8080")
-
 ;; multiple cursors
 (require 'multiple-cursors)
 
