@@ -48,7 +48,8 @@
 (require 'smartparens-html)
 (smartparens-global-mode t)
 (show-smartparens-global-mode t)
-(sp-with-modes '(html-mode)
+(sp-with-modes '((web-mode)
+                 (html-mode))
   (sp-local-pair "%" "%"))
 
 
