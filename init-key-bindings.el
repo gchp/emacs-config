@@ -2,7 +2,7 @@
 
 ;; Enable key-chord for keybindings
 (key-chord-mode 1)
-
+(setq key-chord-two-keys-delay 0.5)
 
 ;; map jk to exit insert mode in evil
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
