@@ -18,6 +18,7 @@
 (global-set-key (kbd "C--") 'er/contract-region)
 
 ;; Magit
+(key-chord-define evil-normal-state-map "gs" 'magit-status)
 (global-set-key (kbd "C-x m") 'magit-status)
 
 ;; Multiple cursors
