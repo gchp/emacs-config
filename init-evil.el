@@ -1,4 +1,5 @@
 (require-package 'evil)
+(require-package 'surround)
 
 ;; Set modeline colors depending on evil mode
 ;; Insert - green
@@ -20,5 +21,6 @@
 
 ;; Initialize evil mode
 (evil-mode 1)
+(global-surround-mode 1)
 
 (provide 'init-evil)
