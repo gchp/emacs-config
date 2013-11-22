@@ -2,6 +2,7 @@
 (require-package 'magit-svn)
 (require-package 'git-gutter-fringe)
 (require-package 'git-messenger)
+(require-package 'git-blame)
 
 ;; Set up magit to work with git-svn repos
 (add-hook 'magit-mode-hook 'magit-load-config-extensions)
