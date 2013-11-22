@@ -20,6 +20,7 @@
 ;; Magit
 (key-chord-define evil-normal-state-map "gs" 'magit-status)
 (global-set-key (kbd "C-x m") 'magit-status)
+(key-chord-define evil-normal-state-map "gm" 'git-messenger:popup-message)
 
 ;; Multiple cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)

@@ -34,16 +34,15 @@
 (require-package 'yasnippet)
 (require-package 'elpy)
 (require-package 'emmet-mode)
-(require-package 'git-gutter)
 (require-package 'icomplete+)
-(require-package 'magit)
-(require-package 'magit-svn)
 (require-package 'less-css-mode)
 (require-package 'flx-ido)
 (require-package 'projectile)
 (require-package 'smartparens)
 (require-package 'markdown-mode)
 (require-package 'web-mode)
+
+(require 'init-git)
 
 (require 'smartparens-config)
 (require 'smartparens-html)
@@ -123,9 +122,6 @@
 ;; Git gutter
 (require 'git-gutter)
 (global-git-gutter-mode t)
-
-;; Set up magit to work with git-svn repos
-(add-hook 'magit-mode-hook 'magit-load-config-extensions)
 
 ;; auto completion
 (require 'auto-complete-config)
