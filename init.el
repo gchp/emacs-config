@@ -37,6 +37,7 @@
 (require-package 'git-gutter)
 (require-package 'icomplete+)
 (require-package 'magit)
+(require-package 'magit-svn)
 (require-package 'less-css-mode)
 (require-package 'flx-ido)
 (require-package 'projectile)
