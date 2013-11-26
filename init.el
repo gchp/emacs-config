@@ -86,7 +86,12 @@
 (projectile-global-mode)
 
 ;; org-mode
+(require 'ox-latex)
 (setq org-log-done 'note)
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+  (setq org-latex-listings 'minted)
+  (setq org-latex-pdf-process
+        '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 ;; multiple cursors
 (require 'multiple-cursors)
