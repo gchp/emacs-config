@@ -65,7 +65,8 @@
 
 (elpy-enable)
 (add-hook 'elpy-mode-hook '(lambda ()
-                             (highlight-indentation-mode -1)))
+                             (highlight-indentation-mode -1)
+                             (elpy-use-ipython)))
 
 (defun comment-or-uncomment-region-or-line ()
   "Comments or uncomments the active region, or the current line if there's no active region."
@@ -86,7 +87,12 @@
 (projectile-global-mode)
 
 ;; org-mode
+(require 'ox-latex)
 (setq org-log-done 'note)
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+  (setq org-latex-listings 'minted)
+  (setq org-latex-pdf-process
+        '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 ;; multiple cursors
 (require 'multiple-cursors)
