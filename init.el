@@ -92,11 +92,6 @@
 ;; multiple cursors
 (require 'multiple-cursors)
 
-;; snippets
-;;(require 'yasnippet)
-;;(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
-;;(yas-global-mode 1)
-
 ;; emmet config
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode)
