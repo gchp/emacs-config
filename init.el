@@ -27,7 +27,7 @@
 (require 'init-gui)
 
 ;; Load Evil mode config
-(require 'init-evil)
+;; (require 'init-evil)
 
 (require 'init-flycheck)
 
@@ -58,10 +58,6 @@
 
 ;; sane defaults from https://github.com/magnars/.emacs.d/
 (require 'sane-defaults)
-
-;; Highlight current line
-;; (global-hl-line-mode t)
-
 
 (elpy-enable)
 (add-hook 'elpy-mode-hook '(lambda ()

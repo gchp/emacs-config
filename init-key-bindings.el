@@ -5,24 +5,14 @@
 
 ;; (setq key-chord-two-keys-delay 0.5)
 
-;; map jk to exit insert mode in evil
-(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
-
-;; restore Control-e in evil-mode
-(define-key evil-normal-state-map "\C-e" 'evil-end-of-line)
-(define-key evil-insert-state-map "\C-e" 'end-of-line)
-(define-key evil-visual-state-map "\C-e" 'evil-end-of-line)
-(define-key evil-motion-state-map "\C-e" 'evil-end-of-line)
-
-;; Expand region
+; Expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C--") 'er/contract-region)
 
 ;; Magit
-(key-chord-define evil-normal-state-map "gs" 'magit-status)
-(global-set-key (kbd "C-x m") 'magit-status)
-(key-chord-define evil-normal-state-map "gm" 'git-messenger:popup-message)
-(key-chord-define evil-normal-state-map "gb" 'git-blame-mode)
+(key-chord-define-global "gs" 'magit-status)
+(key-chord-define-global "gm" 'git-messenger:popup-message)
+(key-chord-define-global "gb" 'git-blame-mode)
 
 ;; Multiple cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
