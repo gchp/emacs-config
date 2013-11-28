@@ -7,6 +7,9 @@
 ;; Set up magit to work with git-svn repos
 (add-hook 'magit-mode-hook 'magit-load-config-extensions)
 
+(require 'git-gutter)
+(global-git-gutter-mode t)
+
 (after-load 'magit-key-mode
   (require 'magit-svn))
 

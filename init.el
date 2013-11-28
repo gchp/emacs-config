@@ -115,10 +115,6 @@
 (add-to-list 'load-path (expand-file-name "pony-mode/src" user-lib-dir))
 (require 'pony-mode)
 
-;; Git gutter
-(require 'git-gutter)
-(global-git-gutter-mode t)
-
 ;; auto completion
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/lib/auto-complete//ac-dict")
