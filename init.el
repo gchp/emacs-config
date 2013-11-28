@@ -87,6 +87,7 @@
 (projectile-global-mode)
 
 ;; org-mode
+(require-package 'org)
 (require 'ox-latex)
 (setq org-log-done 'note)
 (add-to-list 'org-latex-packages-alist '("" "minted"))
