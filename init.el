@@ -12,7 +12,7 @@
 
 (require 'init-utils)
 ;; load package config
-(require 'setup-package)
+(require 'init-package)
 
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))

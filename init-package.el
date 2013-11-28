@@ -17,4 +17,4 @@
         (package-refresh-contents)
         (require-package package min-version t)))))
 
-(provide 'setup-package)
+(provide 'init-package)
