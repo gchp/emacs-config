@@ -10,7 +10,7 @@
 (global-set-key (kbd "C--") 'er/contract-region)
 
 ;; Magit
-(key-chord-define-global "gs" 'magit-status)
+(global-set-key (kbd "C-x m") 'magit-status)
 (key-chord-define-global "gm" 'git-messenger:popup-message)
 (key-chord-define-global "gb" 'git-blame-mode)
 
