@@ -26,5 +26,15 @@
   (delete-trailing-whitespace)
   (indent-buffer))
 
+;; Change mode-line color if it has been modified, and not saved
+(lexical-let ((default-color (cons (face-background 'mode-line)
+                                   (face-foreground 'mode-line))))
+  (add-hook 'post-command-hook
+            (lambda ()
+              (let ((color (cond ((minibufferp) default-color)
+                                 ((buffer-modified-p) '("#ff4a52" . "#26292c"))
+                                 (t default-color))))
+                (set-face-background 'mode-line (car color))
+                (set-face-foreground 'mode-line (cdr color))))))
 
 (provide 'init-buffers)
