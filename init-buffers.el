@@ -37,4 +37,19 @@
                 (set-face-background 'mode-line (car color))
                 (set-face-foreground 'mode-line (cdr color))))))
 
+(defun gc/new-line-below ()
+  "Insert a new line below the current line"
+  (interactive)
+  (end-of-line)
+  (newline)
+  (indent-according-to-mode))
+
+(defun gc/new-line-above ()
+  "Insert a new line above the current line"
+  (interactive)
+  (beginning-of-line)
+  (newline)
+  (previous-line)
+  (indent-according-to-mode))
+
 (provide 'init-buffers)
