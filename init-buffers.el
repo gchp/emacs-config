@@ -7,11 +7,6 @@
       (setq beg (line-beginning-position) end (line-end-position)))
     (comment-or-uncomment-region beg end)))
 
-(defun toggle-comment-on-line ()
-  "Comment or un-comment current line."
-  (interactive)
-  (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
-
 (defun untabify-buffer ()
   (interactive)
   (untabify (point-min) (point-max)))
