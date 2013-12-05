@@ -1,6 +1,6 @@
 ;;; Emacs-Config -- My Emacs configuration for day-to-day development work
 
-;;; Commentary: 
+;;; Commentary:
 
 ;; Initialisation file for my Emacs configuration
 
@@ -25,9 +25,6 @@
 ;; Load GUI config
 ;; Contains theme, font, modeline, window config etc
 (require 'init-gui)
-
-;; Load Evil mode config
-;; (require 'init-evil)
 
 (require 'init-flycheck)
 
