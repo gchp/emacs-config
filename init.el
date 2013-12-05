@@ -85,10 +85,6 @@
 ;; Expand region
 (require 'expand-region)
 
-;; Pony-mode
-(add-to-list 'load-path (expand-file-name "pony-mode/src" user-lib-dir))
-(require 'pony-mode)
-
 ;; auto completion
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/lib/auto-complete//ac-dict")
