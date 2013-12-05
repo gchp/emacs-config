@@ -10,11 +10,6 @@
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path user-lib-dir)
 
-(require 'init-utils)
-;; load package config
-(require 'init-package)
-
-
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
@@ -22,11 +17,15 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
-;; Load GUI config
-;; Contains theme, font, modeline, window config etc
-(require 'init-gui)
 
+(require 'init-utils)
+(require 'init-package)
+(require 'init-gui)
 (require 'init-flycheck)
+(require 'init-git)
+(require 'init-org)
+(require 'init-javascript)
+(require 'init-buffers)
 
 (require-package 'yasnippet)
 (require-package 'elpy)
@@ -38,8 +37,6 @@
 (require-package 'smartparens)
 (require-package 'markdown-mode)
 (require-package 'web-mode)
-
-(require 'init-git)
 
 (require 'smartparens-config)
 (require 'smartparens-html)
@@ -62,13 +59,9 @@
                              (elpy-use-ipython)))
 
 
-
 ;; Projectile
 (require 'projectile)
 (projectile-global-mode)
-
-;; org-mode
-(require 'init-org)
 
 ;; multiple cursors
 (require 'multiple-cursors)
@@ -106,10 +99,6 @@
 
 (add-hook 'less-css-mode-hook (lambda () (rainbow-mode)))
 (add-hook 'css-mode-hook (lambda () (rainbow-mode)))
-
-(require 'init-javascript)
-
-(require 'init-buffers)
 
 ;; load custom keys
 (require 'init-key-bindings)
