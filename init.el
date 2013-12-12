@@ -34,18 +34,8 @@
 (require-package 'less-css-mode)
 (require-package 'flx-ido)
 (require-package 'projectile)
-(require-package 'smartparens)
 (require-package 'markdown-mode)
 (require-package 'web-mode)
-
-(require 'smartparens-config)
-(require 'smartparens-html)
-(smartparens-global-mode t)
-(show-smartparens-global-mode t)
-(sp-with-modes '((web-mode)
-                 (html-mode))
-  (sp-local-pair "%" "%"))
-
 
 ;; Initialize web-mode for .html files
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))

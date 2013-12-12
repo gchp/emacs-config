@@ -1,3 +1,24 @@
+;;; Emacs-Config -- init-buffers.el
+
+;;; Commentary:
+
+;; This file contains configuration for anything that takes place inside buffers
+;; in regards to editing, formatting etc.
+
+
+;;; Code:
+
+(require-package 'smartparens)
+
+(require 'smartparens-config)
+(require 'smartparens-html)
+(smartparens-global-mode t)
+(show-smartparens-global-mode t)
+(sp-with-modes '((web-mode)
+                 (html-mode))
+  (sp-local-pair "%" "%"))
+
+
 (defun comment-or-uncomment-region-or-line ()
   "Comments or uncomments the active region, or the current line if there's no active region."
   (interactive)
@@ -33,14 +54,14 @@
                 (set-face-foreground 'mode-line (cdr color))))))
 
 (defun gc/new-line-below ()
-  "Insert a new line below the current line"
+  "Insert a new line below the current line."
   (interactive)
   (end-of-line)
   (newline)
   (indent-according-to-mode))
 
 (defun gc/new-line-above ()
-  "Insert a new line above the current line"
+  "Insert a new line above the current line."
   (interactive)
   (beginning-of-line)
   (newline)
@@ -49,3 +70,4 @@
 
 
 (provide 'init-buffers)
+;;; init-buffers.el ends here
