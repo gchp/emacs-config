@@ -49,6 +49,10 @@
                              (elpy-use-ipython)))
 
 
+;; yasnippet
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+(yas-global-mode 1)
+
 ;; Projectile
 (require 'projectile)
 (projectile-global-mode)
