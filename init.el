@@ -26,8 +26,8 @@
 (require 'init-org)
 (require 'init-javascript)
 (require 'init-buffers)
+(require 'init-snippets)
 
-(require-package 'yasnippet)
 (require-package 'elpy)
 (require-package 'emmet-mode)
 (require-package 'icomplete+)
@@ -48,10 +48,6 @@
                              (highlight-indentation-mode -1)
                              (elpy-use-ipython)))
 
-
-;; yasnippet
-(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
-(yas-global-mode 1)
 
 ;; Projectile
 (require 'projectile)
