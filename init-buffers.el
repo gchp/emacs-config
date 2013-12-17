@@ -9,6 +9,10 @@
 ;;; Code:
 
 (require-package 'smartparens)
+(require-package 'ibuffer-vc)
+(require-package 'ibuffer-git)
+
+(require 'ibuffer-git)
 
 (require 'smartparens-config)
 (require 'smartparens-html)
@@ -67,6 +71,23 @@
   (newline)
   (previous-line)
   (indent-according-to-mode))
+
+
+(add-hook 'ibuffer-hook
+          (lambda ()
+            (ibuffer-vc-set-filter-groups-by-vc-root)
+            (unless (eq ibuffer-sorting-mode 'alphabetic)
+              (ibuffer-do-sort-by-alphabetic))))
+
+(setq ibuffer-formats
+      '((mark modified read-only git-status-mini " "
+              (name 18 18 :left :elide)
+              " "
+              (mode 16 16 :left :elide)
+              " "
+              (git-status 16 16 :left)
+              " "
+              filename-and-process)))
 
 
 (provide 'init-buffers)
