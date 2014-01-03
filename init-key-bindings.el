@@ -3,16 +3,15 @@
 ;; Enable key-chord for keybindings
 (key-chord-mode 1)
 
-;; (setq key-chord-two-keys-delay 0.5)
-
 ; Expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C--") 'er/contract-region)
 
 ;; Magit
 (global-set-key (kbd "C-x m") 'magit-status)
-(key-chord-define-global "gm" 'git-messenger:popup-message)
-(key-chord-define-global "gb" 'git-blame-mode)
+(global-set-key (kbd "C-c m l") 'magit-log)
+(global-set-key (kbd "C-c m b") 'magit-blame-mode)
+(global-set-key (kbd "C-c m m") 'git-messenger:popup-message)
 
 ;; Multiple cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
