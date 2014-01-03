@@ -8,7 +8,7 @@
 (global-set-key (kbd "C--") 'er/contract-region)
 
 ;; Magit
-(global-set-key (kbd "C-x m") 'magit-status)
+(global-set-key (kbd "C-c m s") 'magit-status)
 (global-set-key (kbd "C-c m l") 'magit-log)
 (global-set-key (kbd "C-c m b") 'magit-blame-mode)
 (global-set-key (kbd "C-c m m") 'git-messenger:popup-message)
