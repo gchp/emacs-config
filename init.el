@@ -31,7 +31,6 @@
 (require-package 'elpy)
 (require-package 'emmet-mode)
 (require-package 'icomplete+)
-(require-package 'less-css-mode)
 (require-package 'flx-ido)
 (require-package 'projectile)
 (require-package 'markdown-mode)
@@ -80,11 +79,7 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/lib/auto-complete//ac-dict")
 (ac-config-default)
 
-;; rainbow mode
-(require 'rainbow-mode)
-
-(add-hook 'less-css-mode-hook (lambda () (rainbow-mode)))
-(add-hook 'css-mode-hook (lambda () (rainbow-mode)))
+(require 'init-css)
 
 ;; load custom keys
 (require 'init-key-bindings)
