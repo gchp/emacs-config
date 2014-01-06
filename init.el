@@ -20,6 +20,7 @@
 
 (require 'init-utils)
 (require 'init-package)
+(require 'init-auto-complete)
 (require 'init-gui)
 (require 'init-flycheck)
 (require 'init-git)
@@ -75,9 +76,7 @@
 (require 'expand-region)
 
 ;; auto completion
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/lib/auto-complete//ac-dict")
-(ac-config-default)
+
 
 (require 'init-css)
 
