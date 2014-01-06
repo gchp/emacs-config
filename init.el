@@ -29,9 +29,9 @@
 (require 'init-buffers)
 (require 'init-snippets)
 
+
 (require-package 'elpy)
 (require-package 'emmet-mode)
-(require-package 'icomplete+)
 (require-package 'flx-ido)
 (require-package 'projectile)
 (require-package 'markdown-mode)

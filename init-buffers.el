@@ -11,9 +11,9 @@
 (require-package 'smartparens)
 (require-package 'ibuffer-vc)
 (require-package 'ibuffer-git)
+(require-package 'icomplete+)
 
 (require 'ibuffer-git)
-
 (require 'smartparens-config)
 (require 'smartparens-html)
 (smartparens-global-mode t)
