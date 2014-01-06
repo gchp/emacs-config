@@ -28,11 +28,10 @@
 (require 'init-javascript)
 (require 'init-buffers)
 (require 'init-snippets)
-
+(require 'init-css)
 
 (require-package 'elpy)
 (require-package 'emmet-mode)
-(require-package 'flx-ido)
 (require-package 'projectile)
 (require-package 'markdown-mode)
 (require-package 'web-mode)
@@ -48,12 +47,12 @@
                              (highlight-indentation-mode -1)
                              (elpy-use-ipython)))
 
-
 ;; Projectile
 (require 'projectile)
 (projectile-global-mode)
 
 ;; multiple cursors
+(require-package 'multiple-cursors)
 (require 'multiple-cursors)
 
 ;; emmet config
@@ -63,22 +62,8 @@
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2)))
 (setq emmet-move-cursor-between-quotes t)
 
-;; icomplete
-(icomplete-mode 1)
-(setq icomplete-compute-delay 0)
-(require 'icomplete+)
-
-;; ido
-(require 'ido)
-(ido-mode t)
-
 ;; Expand region
 (require 'expand-region)
-
-;; auto completion
-
-
-(require 'init-css)
 
 ;; load custom keys
 (require 'init-key-bindings)

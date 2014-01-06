@@ -12,6 +12,7 @@
 (require-package 'ibuffer-vc)
 (require-package 'ibuffer-git)
 (require-package 'icomplete+)
+(require-package 'flx-ido)
 
 (require 'ibuffer-git)
 (require 'smartparens-config)
@@ -22,6 +23,15 @@
                  (html-mode))
   (sp-local-pair "%" "%"))
 
+
+;; icomplete
+(icomplete-mode 1)
+(setq icomplete-compute-delay 0)
+(require 'icomplete+)
+
+;; ido
+(require 'ido)
+(ido-mode t)
 
 (defun comment-or-uncomment-region-or-line ()
   "Comments or uncomments the active region, or the current line if there's no active region."
