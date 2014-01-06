@@ -5,7 +5,7 @@
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 (setq-default ac-expand-on-auto-complete nil)
-(setq-default ac-auto-start 1)
+(setq-default ac-auto-start nil) ;; set to nil in order to play nice with yasnippets
 (setq-default ac-dwim nil) ; To get pop-ups with docs even if a word is uniquely completed
 
 (setq tab-always-indent 'complete)  ;; use 't when auto-complete is disabled
