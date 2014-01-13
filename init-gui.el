@@ -38,12 +38,13 @@
   (load-theme 'flatland t))
 
 (defun init-fonts ()
-  (set-default-font "Source Code Pro-10")
+  (set-default-font "Source Code Pro-8")
   (add-to-list 'default-frame-alist '(font . "Source Code Pro-10")))
 
 
 (defun init-gui-customisations ()
   (init-theme)
+  (setq-default line-spacing 5)
   (init-fonts))
 
 (add-hook 'after-init-hook 'init-gui-customisations)
