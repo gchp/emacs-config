@@ -7,7 +7,7 @@
   (set-scroll-bar-mode nil))
 
 ;; Indentation
-(setq-default tab-width 2)
+(setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
 ;; emacs powerline
@@ -44,7 +44,7 @@
 
 (defun init-gui-customisations ()
   (init-theme)
-  (setq-default line-spacing 5)
+  (setq-default line-spacing 2)
   (init-fonts))
 
 (add-hook 'after-init-hook 'init-gui-customisations)

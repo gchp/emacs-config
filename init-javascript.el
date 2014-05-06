@@ -5,6 +5,10 @@
 (require-package 'js-comint)
 (require-package 'rainbow-delimiters)
 (require-package 'coffee-mode)
+(require-package 'js2-refactor)
+
+(require 'js2-refactor)
+(js2r-add-keybindings-with-prefix "C-c C-m")
 
 (after-load 'js2-mode
   (define-key js2-mode-map (kbd "TAB") 'indent-for-tab-command))
