@@ -29,6 +29,7 @@
 (require 'init-buffers)
 (require 'init-snippets)
 (require 'init-css)
+(require 'init-evil)
 
 (require-package 'elpy)
 (require-package 'emmet-mode)
