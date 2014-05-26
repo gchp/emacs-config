@@ -12,7 +12,6 @@
 (global-set-key (kbd "C-c m l") 'magit-log)
 (global-set-key (kbd "C-c m b") 'magit-blame-mode)
 (global-set-key (kbd "C-c m m") 'git-messenger:popup-message)
-(key-chord-define-global "ms" 'magit-status)
 
 ;; Evil
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
