@@ -29,9 +29,9 @@
 (require 'init-buffers)
 (require 'init-snippets)
 (require 'init-css)
+(require 'init-python)
 (require 'init-evil)
 
-(require-package 'elpy)
 (require-package 'emmet-mode)
 (require-package 'projectile)
 (require-package 'markdown-mode)
@@ -42,11 +42,6 @@
 
 ;; sane defaults from https://github.com/magnars/.emacs.d/
 (require 'sane-defaults)
-
-(elpy-enable)
-(add-hook 'elpy-mode-hook '(lambda ()
-                             (highlight-indentation-mode -1)
-                             (elpy-use-ipython)))
 
 ;; Projectile
 (require 'projectile)
