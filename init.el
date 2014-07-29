@@ -36,6 +36,7 @@
 (require-package 'projectile)
 (require-package 'markdown-mode)
 (require-package 'web-mode)
+(require-package 'rust-mode)
 
 ;; Initialize web-mode for .html files
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
