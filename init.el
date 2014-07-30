@@ -21,6 +21,7 @@
 (require 'init-utils)
 (require 'init-package)
 (require 'init-auto-complete)
+(require 'init-helm)
 (require 'init-gui)
 (require 'init-flycheck)
 (require 'init-git)
