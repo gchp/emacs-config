@@ -1,4 +1,5 @@
 (require-package 'flatland-theme)
+(require-package 'zenburn-theme)
 
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode)
@@ -35,7 +36,7 @@
 (mouse-avoidance-mode 'banish)
 
 (defun init-theme ()
-  (load-theme 'flatland t))
+  (load-theme 'zenburn t))
 
 (defun init-fonts ()
   (set-default-font "Source Code Pro-8")

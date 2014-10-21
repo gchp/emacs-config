@@ -22,6 +22,8 @@
 (define-key helm-grep-mode-map (kbd "p")  'helm-grep-mode-jump-other-window-backward)
 
 (global-set-key (kbd "C-c h o") 'helm-occur)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 (setq
  helm-google-suggest-use-curl-p t
@@ -46,6 +48,10 @@
  helm-buffers-fuzzy-matching t          ; fuzzy matching buffer names when non--nil
                                         ; useful in helm-mini that lists buffers
  )
+
+(when (executable-find "ack-grep")
+  (setq helm-grep-default-command "ack-grep -Hn --no-group --no-color %e %p %f"
+        helm-grep-default-recurse-command "ack-grep -H --no-group --no-color %e %p %f"))
 
 ;; Save current position to mark ring when jumping to a different place
 (add-hook 'helm-goto-line-before-hook 'helm-save-current-pos-to-mark-ring)
