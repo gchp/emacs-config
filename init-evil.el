@@ -1,5 +1,6 @@
 (require-package 'evil)
 (require-package 'surround)
+(require-package 'key-chord)
 
 ;; Set modeline colors depending on evil mode
 ;; Insert - green
@@ -22,5 +23,13 @@
 ;; Initialize evil mode
 (evil-mode 1)
 (global-surround-mode 1)
+
+;; Keybindings
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(define-key evil-normal-state-map "\C-e" 'evil-end-of-line)
+(define-key evil-insert-state-map "\C-e" 'end-of-line)
+(define-key evil-normal-state-map "\C-a" 'evil-beginning-of-line)
+(define-key evil-insert-state-map "\C-a" 'beginning-of-line)
+
 
 (provide 'init-evil)
