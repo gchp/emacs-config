@@ -7,10 +7,12 @@
 ;;; Code:
 
 (defvar user-lib-dir (expand-file-name "lib" user-emacs-directory))
-(add-to-list 'load-path user-emacs-directory)
+(setq lisp-dir (expand-file-name "lisp" user-emacs-directory))
+
+(add-to-list 'load-path lisp-dir)
 (add-to-list 'load-path user-lib-dir)
 
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file (expand-file-name "custom.el" lisp-dir))
 (load custom-file)
 
 (dolist (project (directory-files user-lib-dir t "\\w+"))
