@@ -33,7 +33,7 @@
 (require 'init-snippets)
 (require 'init-css)
 (require 'init-python)
-(require 'init-evil)
+;; (require 'init-evil)
 
 (require-package 'emmet-mode)
 (require-package 'projectile)
