@@ -63,7 +63,7 @@
             (lambda ()
               (let ((color (cond ((minibufferp) default-color)
                                  ((buffer-modified-p) '("#ff4a52" . "#26292c"))
-                                 (t default-color))))
+                                 (t '("#26292c" . "#26292c")))))
                 (set-face-background 'mode-line (car color))
                 (set-face-foreground 'mode-line (cdr color))))))
 
