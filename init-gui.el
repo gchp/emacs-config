@@ -33,14 +33,13 @@
 
 (column-number-mode t)
 (global-visual-line-mode t)
-(mouse-avoidance-mode 'banish)
 
 (defun init-theme ()
   (load-theme 'zenburn t))
 
 (defun init-fonts ()
-  (set-default-font "Source Code Pro-8")
-  (add-to-list 'default-frame-alist '(font . "Source Code Pro-10")))
+  (set-default-font "Droid Sans Mono-8")
+  (add-to-list 'default-frame-alist '(font . "Droid Sans Mono-8")))
 
 
 (defun init-gui-customisations ()
