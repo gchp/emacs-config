@@ -33,6 +33,7 @@
 (require 'init-snippets)
 (require 'init-css)
 (require 'init-python)
+(require 'init-rust)
 ;; (require 'init-evil)
 
 (require-package 'emmet-mode)
