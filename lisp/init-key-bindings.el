@@ -31,5 +31,6 @@
 
 (global-set-key (kbd "C-o") 'gc/new-line-below)
 (global-set-key (kbd "M-o") 'gc/new-line-above)
+(global-set-key (kbd "C-c w") 'delete-trailing-whitespace)
 
 (provide 'init-key-bindings)
